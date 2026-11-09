@@ -205,8 +205,11 @@ main { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gut); }
 /* fix-narrow */
 @media (max-width: 560px) {
   .s-bar .s-btn--sm { display: none; }
+  .s-bar__brand { white-space: normal; line-height: 1.1; flex: 1 1 auto; min-width: 0; overflow: visible; }
+  .s-bar__brand i { flex: none; }
   .s-bar { padding-left: max(16px, env(safe-area-inset-left)); padding-right: max(16px, env(safe-area-inset-right)); }
   .s-dock { box-sizing: border-box; padding-left: max(12px, env(safe-area-inset-left)); padding-right: max(12px, env(safe-area-inset-right)); }
-  .s-dock .s-btn { min-width: 0; white-space: normal; line-height: 1.15; text-align: center; font-size: .82rem; padding: 0 .6em; }
+  .s-dock .s-btn { min-width: 0; max-width: 100%; white-space: normal; overflow-wrap: anywhere; line-height: 1.15; text-align: center; font-size: .82rem; padding: .4em .6em; }
+  .s-dock .s-btn--ghost { flex: 1 1 0; }
   .s-dock .s-btn:first-child { flex: 1.5; }
 }
