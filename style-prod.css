@@ -201,3 +201,12 @@ main { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gut); }
   .s-dock .s-btn { flex: 1; min-height: 48px; font-size: .88rem; padding: 0 .9em; white-space: nowrap; }
   .s-dock .s-btn:first-child { flex: 1.7; }
 }
+
+/* fix-narrow */
+@media (max-width: 560px) {
+  .s-bar .s-btn--sm { display: none; }
+  .s-bar { padding-left: max(16px, env(safe-area-inset-left)); padding-right: max(16px, env(safe-area-inset-right)); }
+  .s-dock { box-sizing: border-box; padding-left: max(12px, env(safe-area-inset-left)); padding-right: max(12px, env(safe-area-inset-right)); }
+  .s-dock .s-btn { min-width: 0; white-space: normal; line-height: 1.15; text-align: center; font-size: .82rem; padding: 0 .6em; }
+  .s-dock .s-btn:first-child { flex: 1.5; }
+}
